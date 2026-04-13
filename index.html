@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open House | 13036 N 23rd Pl, Phoenix, AZ 85022</title>
+<meta name="description" content="Open House: 4 bed, 3 bath midcentury modern home in Paradise Valley Village. $1,699,999. Built 2024. Rooftop deck, mountain views, detached casita, no HOA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black: #111;
+  --dark: #1a1a1a;
+  --gray-900: #222;
+  --gray-700: #555;
+  --gray-500: #888;
+  --gray-300: #ccc;
+  --gray-100: #f5f5f5;
+  --white: #fff;
+  --accent: #c8a96e;
+  --accent-dark: #b08e4a;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- HERO --- */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 1000px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.05) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 40px;
+  max-width: 900px;
+  color: var(--white);
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-address {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.hero-price {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.hero-meta {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.03em;
+}
+
+.hero-cta {
+  margin-top: 28px;
+  display: inline-block;
+  background: var(--accent);
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.hero-cta:hover { background: var(--accent-dark); }
+
+/* --- SECTIONS --- */
+.section {
+  padding: 80px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+/* --- QUICK STATS --- */
+.stats-bar {
+  background: var(--gray-100);
+  border-top: 3px solid var(--accent);
+}
+
+.stats-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 32px;
+  text-align: center;
+}
+
+.stat-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-top: 4px;
+}
+
+/* --- GALLERY --- */
+.gallery-section {
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 8px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+  border-radius: 2px;
+}
+
+.gallery-grid img:hover {
+  opacity: 0.88;
+  transform: scale(1.02);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.lightbox.active { display: flex; }
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-weight: 300;
+  z-index: 1001;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--white);
+  font-size: 2.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 20px;
+  z-index: 1001;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.lightbox-nav:hover { opacity: 1; }
+
+.lightbox-prev { left: 10px; }
+.lightbox-next { right: 10px; }
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--white);
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* --- DESCRIPTION --- */
+.description-text {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: var(--gray-700);
+  max-width: 720px;
+}
+
+.description-text p { margin-bottom: 20px; }
+
+/* --- FEATURES --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.feature-group h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.feature-group ul {
+  list-style: none;
+}
+
+.feature-group li {
+  font-size: 0.95rem;
+  color: var(--gray-700);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature-group li span.label { font-weight: 500; color: var(--dark); }
+
+/* --- NEIGHBORHOOD --- */
+.neighborhood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.score-card {
+  background: var(--gray-100);
+  padding: 28px 24px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.score-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.score-of { font-size: 0.85rem; color: var(--gray-500); }
+
+.score-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-700);
+  margin-top: 6px;
+}
+
+.schools-list {
+  list-style: none;
+}
+
+.school-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.school-name {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.school-grade {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+.school-rating {
+  background: var(--gray-100);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+/* --- OPEN HOUSE --- */
+.open-house-section {
+  background: var(--dark);
+  color: var(--white);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.open-house-section .section-label { color: var(--accent); }
+.open-house-section .section-title { color: var(--white); margin-bottom: 16px; }
+
+.open-house-date {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+}
+
+.open-house-time {
+  font-size: 1rem;
+  color: var(--gray-300);
+  margin-bottom: 32px;
+}
+
+.open-house-address {
+  font-size: 1rem;
+  color: var(--gray-300);
+}
+
+.open-house-cta {
+  display: inline-block;
+  margin-top: 32px;
+  background: var(--accent);
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.open-house-cta:hover { background: var(--accent-dark); }
+
+/* --- FORM --- */
+.form-section {
+  background: var(--gray-100);
+  padding: 80px 24px;
+}
+
+.form-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.form-container .section-label,
+.form-container .section-title {
+  text-align: center;
+}
+
+.contact-form { margin-top: 40px; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-row.full { grid-template-columns: 1fr; }
+
+.form-group { display: flex; flex-direction: column; }
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-700);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 14px 16px;
+  border: 1px solid var(--gray-300);
+  border-radius: 2px;
+  background: var(--white);
+  color: var(--dark);
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.form-group textarea { resize: vertical; min-height: 100px; }
+
+.form-submit {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  background: var(--dark);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-submit:hover { background: var(--gray-900); }
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.form-success h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.form-success p {
+  color: var(--gray-700);
+}
+
+/* --- MAP --- */
+.map-container {
+  width: 100%;
+  height: 400px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* --- FOOTER --- */
+.footer {
+  background: var(--dark);
+  color: var(--gray-500);
+  text-align: center;
+  padding: 40px 24px;
+  font-size: 0.85rem;
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer a:hover { text-decoration: underline; }
+
+.footer-name {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero { min-height: 500px; }
+  .hero-content { padding: 40px 24px; }
+  .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .stat-value { font-size: 1.5rem; }
+  .section { padding: 60px 20px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 4px; }
+  .gallery-grid img { height: 180px; }
+  .features-grid { grid-template-columns: 1fr; gap: 32px; }
+  .form-row { grid-template-columns: 1fr; }
+  .neighborhood-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-grid img { height: 220px; }
+  .neighborhood-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-img" src="https://pi.movoto.com/p/471/6916862_0_6ERjE6_p.webp" alt="13036 N 23rd Pl, Phoenix AZ - Exterior">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Open House</div>
+    <h1 class="hero-address">13036 N 23rd Place<br>Phoenix, AZ 85022</h1>
+    <div class="hero-price">$1,699,999</div>
+    <div class="hero-meta">4 Bed &nbsp;&bull;&nbsp; 3 Bath &nbsp;&bull;&nbsp; 3,056 Sq Ft &nbsp;&bull;&nbsp; Built 2024</div>
+    <a href="#open-house" class="hero-cta">See Open House Details</a>
+  </div>
+</section>
+
+<!-- QUICK STATS -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-value">4</div>
+      <div class="stat-label">Bedrooms</div>
+    </div>
+    <div>
+      <div class="stat-value">3</div>
+      <div class="stat-label">Full Baths</div>
+    </div>
+    <div>
+      <div class="stat-value">3,056</div>
+      <div class="stat-label">Sq Ft</div>
+    </div>
+    <div>
+      <div class="stat-value">0.24</div>
+      <div class="stat-label">Acres</div>
+    </div>
+    <div>
+      <div class="stat-value">2024</div>
+      <div class="stat-label">Year Built</div>
+    </div>
+    <div>
+      <div class="stat-value">$0</div>
+      <div class="stat-label">HOA</div>
+    </div>
+  </div>
+</div>
+
+<!-- PHOTO GALLERY -->
+<section class="gallery-section" id="photos">
+  <div class="section-label">Gallery</div>
+  <h2 class="section-title">See the Home</h2>
+  <div class="gallery-grid">
+    <img src="https://pi.movoto.com/p/471/6916862_0_E3y2QR_p.webp" alt="Property view" loading="lazy" onclick="openLightbox(0)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_RirEeA_p.webp" alt="Property exterior" loading="lazy" onclick="openLightbox(1)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_VqBA7U_p.webp" alt="Property view" loading="lazy" onclick="openLightbox(2)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_6ERjE6_p.webp" alt="Exterior front" loading="lazy" onclick="openLightbox(3)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_QFIvqJ_p.webp" alt="Exterior detail" loading="lazy" onclick="openLightbox(4)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_NAEMVm_p.webp" alt="Exterior side" loading="lazy" onclick="openLightbox(5)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_BqRyqr_p.webp" alt="Living room" loading="lazy" onclick="openLightbox(6)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_7ErUnz_p.webp" alt="Living area" loading="lazy" onclick="openLightbox(7)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_F7JaJB_p.webp" alt="Living space" loading="lazy" onclick="openLightbox(8)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_Bafzvu_p.webp" alt="Kitchen" loading="lazy" onclick="openLightbox(9)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_BRUi6N_p.webp" alt="Kitchen detail" loading="lazy" onclick="openLightbox(10)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_MReVyi_p.webp" alt="Kitchen island" loading="lazy" onclick="openLightbox(11)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_m7RZE2_p.webp" alt="Dining area" loading="lazy" onclick="openLightbox(12)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_IByBaR_p.webp" alt="Dining room" loading="lazy" onclick="openLightbox(13)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_MyAqqZ_p.webp" alt="Primary bedroom" loading="lazy" onclick="openLightbox(14)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_BBJaAU_p.webp" alt="Bedroom" loading="lazy" onclick="openLightbox(15)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_yjfNAq_p.webp" alt="Bedroom suite" loading="lazy" onclick="openLightbox(16)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_Y3zvm2_p.webp" alt="Primary bath" loading="lazy" onclick="openLightbox(17)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_6RQIaR_p.webp" alt="Bathroom" loading="lazy" onclick="openLightbox(18)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_uNibJQ_p.webp" alt="Bath detail" loading="lazy" onclick="openLightbox(19)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_mAnaF7_p.webp" alt="Outdoor living" loading="lazy" onclick="openLightbox(20)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_y32RjE_p.webp" alt="Covered patio" loading="lazy" onclick="openLightbox(21)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_aMFYfV_p.webp" alt="Backyard" loading="lazy" onclick="openLightbox(22)">
+    <img src="https://pi.movoto.com/p/471/6916862_0_AVvqrN_p.webp" alt="Desert landscape" loading="lazy" onclick="openLightbox(23)">
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">&#8249;</button>
+  <img id="lightbox-img" src="" alt="Property photo">
+  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">&#8250;</button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<!-- PROPERTY DESCRIPTION -->
+<section class="section" id="about">
+  <div class="section-label">About This Home</div>
+  <h2 class="section-title">The Real Story</h2>
+  <div class="description-text">
+    <p>Here's the deal: someone built their dream home &mdash; midcentury design, but with the kind of space modern life actually needs &mdash; and now you get to buy it.</p>
+
+    <p>4 beds. 3 full baths. 3,056 square feet on nearly a quarter acre in Paradise Valley Village. Built in 2024, so everything is new. Everything works. No deferred maintenance. No "good bones" cope.</p>
+
+    <p>The kitchen has a party pantry and an appliance galley &mdash; which means you can cook for 20 people without your counters looking like a war zone. The living spaces are big and they flow the way you want: open where it matters, defined where it counts.</p>
+
+    <p>Head up to the rooftop deck. Mountain views. City lights. That's your evening. Step outside at ground level and you've got 1,000 square feet of covered outdoor space with a fire feature &mdash; this is the Phoenix backyard you actually use year-round.</p>
+
+    <p>There's a detached casita for guests, in-laws, or your home office that needs a real door and its own walls. The garage is oversized, climate-controlled, and has extra height &mdash; if you care about your cars, this matters.</p>
+
+    <p>No HOA. Cul-de-sac. Desert preserve borders the lot. Mountain views front and back. Property taxes are $569 a year. Read that again.</p>
+
+    <p>This one checks the boxes. Come see it.</p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" style="padding-top: 0;">
+  <div class="section-label">Details</div>
+  <h2 class="section-title">Property Features</h2>
+  <div class="features-grid">
+    <div class="feature-group">
+      <h3>The Basics</h3>
+      <ul>
+        <li><span class="label">Price</span> <span>$1,699,999</span></li>
+        <li><span class="label">Price / Sq Ft</span> <span>$556</span></li>
+        <li><span class="label">Bedrooms</span> <span>4</span></li>
+        <li><span class="label">Bathrooms</span> <span>3 Full</span></li>
+        <li><span class="label">Living Area</span> <span>3,056 Sq Ft</span></li>
+        <li><span class="label">Lot Size</span> <span>10,424 Sq Ft (0.24 Ac)</span></li>
+        <li><span class="label">Year Built</span> <span>2024</span></li>
+        <li><span class="label">Type</span> <span>Single Family</span></li>
+        <li><span class="label">HOA</span> <span>None</span></li>
+        <li><span class="label">Annual Taxes</span> <span>$569</span></li>
+        <li><span class="label">MLS #</span> <span>6916862</span></li>
+      </ul>
+    </div>
+    <div class="feature-group">
+      <h3>Interior</h3>
+      <ul>
+        <li><span class="label">Flooring</span> <span>Laminate</span></li>
+        <li><span class="label">Ceilings</span> <span>9'+ Flat & Vaulted</span></li>
+        <li><span class="label">Kitchen</span> <span>Island, Walk-in Pantry</span></li>
+        <li><span class="label">Primary Bath</span> <span>Separate Shower & Tub</span></li>
+        <li><span class="label">Fireplace</span> <span>Two-Way, Gas</span></li>
+        <li><span class="label">Laundry</span> <span>Inside, Hookups</span></li>
+        <li><span class="label">Windows</span> <span>Dual Pane</span></li>
+        <li><span class="label">Other</span> <span>Double Vanity, Bidet</span></li>
+      </ul>
+    </div>
+    <div class="feature-group">
+      <h3>Kitchen & Appliances</h3>
+      <ul>
+        <li><span class="label">Range</span> <span>Gas</span></li>
+        <li><span class="label">Oven</span> <span>Built-In Gas</span></li>
+        <li><span class="label">Dishwasher</span> <span>Yes</span></li>
+        <li><span class="label">Refrigerator</span> <span>Included</span></li>
+        <li><span class="label">Disposal</span> <span>Yes</span></li>
+        <li><span class="label">Counters</span> <span>Non-Laminate</span></li>
+        <li><span class="label">Pantry</span> <span>Walk-in + Party Pantry</span></li>
+      </ul>
+    </div>
+    <div class="feature-group">
+      <h3>Exterior & Lot</h3>
+      <ul>
+        <li><span class="label">Garage</span> <span>2-Car, Oversized, Climate Controlled</span></li>
+        <li><span class="label">Open Parking</span> <span>3 Spaces</span></li>
+        <li><span class="label">Casita</span> <span>Detached Guest House</span></li>
+        <li><span class="label">Patio</span> <span>1,000 Sq Ft Covered</span></li>
+        <li><span class="label">Fire Feature</span> <span>Exterior Fireplace</span></li>
+        <li><span class="label">Rooftop Deck</span> <span>Yes</span></li>
+        <li><span class="label">Fencing</span> <span>Block & Wrought Iron</span></li>
+        <li><span class="label">Lot</span> <span>Cul-de-Sac, Desert, Hillside</span></li>
+        <li><span class="label">View</span> <span>Mountain & City Lights</span></li>
+        <li><span class="label">Borders</span> <span>Preserve / Public Land</span></li>
+      </ul>
+    </div>
+    <div class="feature-group">
+      <h3>Climate & Systems</h3>
+      <ul>
+        <li><span class="label">Cooling</span> <span>Central Air + Mini Split</span></li>
+        <li><span class="label">Heating</span> <span>Electric</span></li>
+        <li><span class="label">Thermostat</span> <span>Programmable</span></li>
+        <li><span class="label">Water</span> <span>City Water</span></li>
+        <li><span class="label">Sewer</span> <span>Public, Connected</span></li>
+        <li><span class="label">Construction</span> <span>Stucco, Block, Wood Frame</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- NEIGHBORHOOD -->
+<section class="section" id="neighborhood" style="padding-top: 0;">
+  <div class="section-label">Neighborhood</div>
+  <h2 class="section-title">Paradise Valley Village</h2>
+
+  <div class="neighborhood-grid">
+    <div class="score-card">
+      <div class="score-number">48</div>
+      <div class="score-of">/ 100</div>
+      <div class="score-label">Walkability</div>
+    </div>
+    <div class="score-card">
+      <div class="score-number">69</div>
+      <div class="score-of">/ 100</div>
+      <div class="score-label">Family Score</div>
+    </div>
+    <div class="score-card">
+      <div class="score-number">84</div>
+      <div class="score-of">/ 100</div>
+      <div class="score-label">Dining & Nightlife</div>
+    </div>
+    <div class="score-card">
+      <div class="score-number">96</div>
+      <div class="score-of">/ 100</div>
+      <div class="score-label">Pet Friendly</div>
+    </div>
+  </div>
+
+  <h3 style="font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:16px; padding-bottom:8px; border-bottom:2px solid var(--accent);">Schools</h3>
+  <ul class="schools-list">
+    <li class="school-item">
+      <div>
+        <div class="school-name">Larkspur Elementary School</div>
+        <div class="school-grade">PK, K&ndash;6 &nbsp;&bull;&nbsp; Paradise Valley Unified</div>
+      </div>
+      <div class="school-rating">2 / 10</div>
+    </li>
+    <li class="school-item">
+      <div>
+        <div class="school-name">Shea Middle School</div>
+        <div class="school-grade">5&ndash;8 &nbsp;&bull;&nbsp; Paradise Valley Unified</div>
+      </div>
+      <div class="school-rating">3 / 10</div>
+    </li>
+    <li class="school-item">
+      <div>
+        <div class="school-name">Shadow Mountain High School</div>
+        <div class="school-grade">8&ndash;12 &nbsp;&bull;&nbsp; Paradise Valley Unified</div>
+      </div>
+      <div class="school-rating">5 / 10</div>
+    </li>
+  </ul>
+
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.5!2d-112.037!3d33.600!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM2JzAwLjAiTiAxMTLCsDAyJzEzLjIiVw!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of 13036 N 23rd Pl, Phoenix AZ"></iframe>
+  </div>
+</section>
+
+<!-- OPEN HOUSE -->
+<section class="open-house-section" id="open-house">
+  <div class="section-label">You're Invited</div>
+  <h2 class="section-title">Open House</h2>
+  <div class="open-house-date">Saturday, April 26, 2025</div>
+  <div class="open-house-time">11:00 AM &ndash; 2:00 PM</div>
+  <div class="open-house-address">13036 N 23rd Place &nbsp;&bull;&nbsp; Phoenix, AZ 85022</div>
+  <a href="#contact" class="open-house-cta">I'll Be There</a>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="form-section" id="contact">
+  <div class="form-container">
+    <div class="section-label" style="text-align:center;">Get In Touch</div>
+    <h2 class="section-title" style="text-align:center;">Interested? Let's Talk.</h2>
+
+    <form class="contact-form" id="contactForm" action="https://formsubmit.co/john@thestrategyninjas.com" method="POST">
+      <!-- FormSubmit config -->
+      <input type="hidden" name="_subject" value="Open House Lead: 13036 N 23rd Pl, Phoenix AZ">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="">
+      <input type="text" name="_honey" style="display:none">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required placeholder="you@email.com">
+        </div>
+      </div>
+
+      <div class="form-row full">
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="Phone" placeholder="(555) 555-5555">
+        </div>
+      </div>
+
+      <div class="form-row full">
+        <div class="form-group">
+          <label for="looking">What are you looking for in your next home?</label>
+          <textarea id="looking" name="Looking For" rows="3" placeholder="Tell me what matters most to you..."></textarea>
+        </div>
+      </div>
+
+      <div class="form-row full">
+        <div class="form-group">
+          <label for="questions">Any questions about this property?</label>
+          <textarea id="questions" name="Questions" rows="3" placeholder="Anything you want to know before visiting..."></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="form-submit">Send Message</button>
+    </form>
+
+    <div class="form-success" id="formSuccess">
+      <h3>Message Sent</h3>
+      <p>Thanks for reaching out. I'll get back to you shortly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>Hosted by <span class="footer-name">John Lipe</span> &nbsp;&bull;&nbsp; Strategy Ninjas &nbsp;&bull;&nbsp; <a href="https://thestrategyninjas.com" target="_blank" rel="noopener">thestrategyninjas.com</a></p>
+  <p style="margin-top: 12px; font-size: 0.75rem; color: var(--gray-500);">Listing data courtesy of ARMLS. MLS #6916862. Listed by Tyler Estes, Compass.</p>
+</footer>
+
+<script>
+// Gallery lightbox
+const galleryImages = document.querySelectorAll('.gallery-grid img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCounter = document.getElementById('lightbox-counter');
+let currentIndex = 0;
+const srcs = Array.from(galleryImages).map(img => img.src);
+
+function openLightbox(i) {
+  currentIndex = i;
+  lightboxImg.src = srcs[i];
+  lightboxCounter.textContent = (i + 1) + ' / ' + srcs.length;
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function navLightbox(dir) {
+  currentIndex = (currentIndex + dir + srcs.length) % srcs.length;
+  lightboxImg.src = srcs[currentIndex];
+  lightboxCounter.textContent = (currentIndex + 1) + ' / ' + srcs.length;
+}
+
+lightbox.addEventListener('click', function(e) {
+  if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', function(e) {
+  if (!lightbox.classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') navLightbox(-1);
+  if (e.key === 'ArrowRight') navLightbox(1);
+});
+
+// Form - update _next to redirect back after submission
+const form = document.getElementById('contactForm');
+const nextInput = form.querySelector('input[name="_next"]');
+nextInput.value = window.location.href + '#thankyou';
+
+// Check if redirected back from FormSubmit
+if (window.location.hash === '#thankyou') {
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('formSuccess').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
